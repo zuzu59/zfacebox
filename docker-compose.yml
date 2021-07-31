@@ -1,0 +1,21 @@
+#zf210731.1008
+#source: https://www.dopebuild.com/i-am-sorry-dave-i-am-unable-to-do-that/
+
+version: '3.2'
+services:
+  ## Facebox
+  facebox:
+    image: machinebox/facebox:latest
+    environment:
+#      - MB_BASICAUTH_USER=toto
+#      - MB_BASICAUTH_PASS=tutu
+#      - MB_KEY=MzYxODQwMGJlMDExZjI3YzViMzkxYTJjYWZiMWE4NmQ.5SCFsbh9pNr2C2R3I8MNMPHjPOa9oGo-md1eOXtezHgMPRt3vgZFNSRWgufqQ-LwOjsVcwXRpce9iOqqSECvOA
+      - MB_KEY=$MB_KEY
+      # Only added once the initial seed is completed and the state file exported
+      # to an accessible Web Server
+      # - MB_FACEBOX_STATE_URL="https://allthestatefiles.changeme.com"
+#    networks:
+#      - home_network
+    ports:
+      - 8089:8080
+
