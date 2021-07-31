@@ -12,6 +12,4 @@ services:
       - MB_FACEBOX_DISABLE_RECOGNITION=false
     ports:
       - 8089:8080
-#    volumes:
-#      - ./data:/app/data
 
