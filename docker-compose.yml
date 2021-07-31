@@ -1,4 +1,4 @@
-#zf210731.1057
+#zf210731.1816
 #source: https://www.dopebuild.com/i-am-sorry-dave-i-am-unable-to-do-that/
 
 version: '3.2'
@@ -10,6 +10,7 @@ services:
 #      - MB_BASICAUTH_USER=toto
 #      - MB_BASICAUTH_PASS=tutu
       - MB_KEY=$MB_KEY
+      - MB_FACEBOX_DISABLE_RECOGNITION=false
       # Only added once the initial seed is completed and the state file exported
       # to an accessible Web Server
       # - MB_FACEBOX_STATE_URL="https://allthestatefiles.changeme.com"
