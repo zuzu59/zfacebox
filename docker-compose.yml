@@ -1,9 +1,8 @@
-#zf210731.1816
-#source: https://www.dopebuild.com/i-am-sorry-dave-i-am-unable-to-do-that/
+#zf210731.2214
+#source: https://www.home-assistant.io/integrations/facebox/
 
 version: '3.2'
 services:
-  ## Facebox
   facebox:
     image: machinebox/facebox:latest
     environment:
@@ -11,11 +10,8 @@ services:
 #      - MB_BASICAUTH_PASS=tutu
       - MB_KEY=$MB_KEY
       - MB_FACEBOX_DISABLE_RECOGNITION=false
-      # Only added once the initial seed is completed and the state file exported
-      # to an accessible Web Server
-      # - MB_FACEBOX_STATE_URL="https://allthestatefiles.changeme.com"
-#    networks:
-#      - home_network
     ports:
       - 8089:8080
+#    volumes:
+#      - ./data:/app/data
 
